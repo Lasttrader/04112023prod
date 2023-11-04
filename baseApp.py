@@ -54,7 +54,6 @@ X.extend(x_num)
 X.extend(x_cat_le) #добавляем УЖЕ закодированные признаки 
 X_scaled = num_scaler.transform([X])
 #print('X_scaled: ', X_scaled)
-
 #predict
 predict = kNN.predict(X_scaled) #подаём уже отмасштабированные данные
 if predict == 0:

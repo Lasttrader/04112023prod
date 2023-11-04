@@ -127,7 +127,6 @@ class Dialog(QDialog):
         X.extend(x_cat_le) #добавляем УЖЕ закодированные признаки 
         X_scaled = num_scaler.transform([X])
         #print('X_scaled: ', X_scaled)
-
         #predict
         #X_scaled = [[ 0.82737724, -0.53037664,  0.43279337, -0.47367361, -0.50143844,  0.73769513,-1.44232155, -2.1037683,   0.58111394]]
         predict = kNN.predict(X_scaled) #подаём уже отмасштабированные данные
