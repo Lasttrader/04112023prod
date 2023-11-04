@@ -45,7 +45,7 @@ class Dialog(QDialog):
         '''
         self.formGroupBox = QGroupBox('Input passanger data')
         self.layout = QFormLayout()
-
+        ''' еще один пример создания кнопок
         self.Pclass =QLineEdit()
         self.Pclass.textEdited.connect(self.create_x_for_predict(1))
         self.layout.addRow(QLabel('Pclass'), self.Pclass)
@@ -77,9 +77,24 @@ class Dialog(QDialog):
         self.embarked =QLineEdit()
         self.embarked.textEdited.connect(self.create_x_for_predict(8))
         self.layout.addRow(QLabel('embarked'), self.embarked)
+        '''
+        
+        buttons_list = ['Pclass',
+          'Age',	
+          'SibSp',	
+          'Parch',	
+          'Fare',	
+          'Sex',	
+          'Ticket',	
+          'Cabin',	
+          'Embarked']
+        for index, label in enumerate(buttons_list):
+            x = QLineEdit()
+            x.textEdited.connect(self.create_x_for_predict(index + 1))
+            self.layout.addRow(QLabel(label), x)
 
         self.formGroupBox.setLayout(self.layout)
-
+        
     
     def create_x_for_predict(self,x):
         '''
@@ -96,9 +111,27 @@ class Dialog(QDialog):
         dlg = QMessageBox(self)
         dlg.setWindowTitle("Your predict")
         
+        #Получаем список признаков с формы
+        x_list = list(self.x_for_predict.values())
+        x_cat_list = x_list[5:] #наши категориальные признаки, которые получили в форме 
+        le_list = [sex_LE, ticket_LE, cabin_LE, embarked_LE]
+        x_cat_le =[] #пустой список под закодированые признаки
+        for i in range(len(x_cat_list)):
+            x_cat = le_list[i].transform([x_cat_list[i]])[0]
+            #print(x_cat)
+            x_cat_le.append(x_cat)
+        #print('x_le: ', x_cat_le)
+        X = []
+        x_num = x_list[:5]
+        X.extend(x_num)
+        X.extend(x_cat_le) #добавляем УЖЕ закодированные признаки 
+        X_scaled = num_scaler.transform([X])
+        #print('X_scaled: ', X_scaled)
+
         #predict
-        X_scaled = [[ 0.82737724, -0.53037664,  0.43279337, -0.47367361, -0.50143844,  0.73769513,-1.44232155, -2.1037683,   0.58111394]]
+        #X_scaled = [[ 0.82737724, -0.53037664,  0.43279337, -0.47367361, -0.50143844,  0.73769513,-1.44232155, -2.1037683,   0.58111394]]
         predict = kNN.predict(X_scaled) #подаём уже отмасштабированные данные
+        #print(predict)
         if predict == 0:
             result = 'not survived'
         else:

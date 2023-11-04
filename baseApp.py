@@ -12,6 +12,16 @@ num_scaler = pickle.load(open('../models/tech_models/num_scaler.pkl', 'rb'))
 kNN = pickle.load(open('../models/ml_models/kNN.pkl', 'rb'))
 print('models loaded')
 
+x_list = ['Pclass',
+          'Age',	
+          'SibSp',	
+          'Parch',	
+          'Fare',	
+          'Sex',	
+          'Ticket',	
+          'Cabin',	
+          'Embarked']
+
 '''
 Pclass	Sex	    Age	    SibSp	Parch	Ticket	    Fare	Cabin	Embarked									
 3		male	22.0	1	    0	    113803	    7.2500	C123	    S
@@ -28,7 +38,6 @@ sex = input('input_sex: ')
 ticket = input('input_ticket: ')
 cabin = input('input_cabin: ')
 embarked = input('input_embarked: ')
-
 #le_transform
 x_cat_list = [sex, ticket, cabin, embarked] 
 le_list = [sex_LE, ticket_LE, cabin_LE, embarked_LE]
@@ -38,7 +47,7 @@ for i in range(len(x_cat_list)):
     print(x_cat)
     x_cat_le.append(x_cat)
 #print('x_le: ', x_cat_le)
-#create C for predict
+#create Х for predict
 X = []
 x_num = [Pclass, Age, SibSp, Parch, Fare]
 X.extend(x_num)
