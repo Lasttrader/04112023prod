@@ -28,6 +28,7 @@ sex = input('input_sex: ')
 ticket = input('input_ticket: ')
 cabin = input('input_cabin: ')
 embarked = input('input_embarked: ')
+
 #le_transform
 x_cat_list = [sex, ticket, cabin, embarked] 
 le_list = [sex_LE, ticket_LE, cabin_LE, embarked_LE]
