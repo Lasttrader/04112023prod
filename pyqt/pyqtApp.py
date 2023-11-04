@@ -11,7 +11,8 @@ from PyQt6.QtWidgets import (QApplication,
                              QVBoxLayout,
                              QGroupBox,
                              QLabel,
-                             QMessageBox)
+                             QMessageBox,
+                             QPushButton)
 print('import success')
 
 #load models
@@ -78,7 +79,7 @@ class Dialog(QDialog):
         self.embarked.textEdited.connect(self.create_x_for_predict(8))
         self.layout.addRow(QLabel('embarked'), self.embarked)
         '''
-        
+
         buttons_list = ['Pclass',
           'Age',	
           'SibSp',	
@@ -92,10 +93,8 @@ class Dialog(QDialog):
             x = QLineEdit()
             x.textEdited.connect(self.create_x_for_predict(index + 1))
             self.layout.addRow(QLabel(label), x)
-
         self.formGroupBox.setLayout(self.layout)
         
-    
     def create_x_for_predict(self,x):
         '''
         функция которая собирает Х для прогноза
