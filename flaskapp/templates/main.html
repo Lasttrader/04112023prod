@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 1</title>
+</head>
+
+<head>
+    <h1>titanic passenger predict </h1>
+</head>
+
+<body>
+    <form action="{{url_for('main')}}" method="POST">
+        <fieldset>
+            <small>Pclass</small>
+            <input type="text" name=Pclass>
+            <br>
+            <br>
+            <small>Age</small>
+            <input type="text" name=Age>
+            <br>
+            <br>
+            <small>SibSp</small>
+            <input type="text" name=SibSp>
+            <br>
+            <br>
+            <small>Parch</small>
+            <input type="text" name=Parch>
+            <br>
+            <br>
+            <small>Fare</small>
+            <input type="text" name=Fare>
+            <br>
+            <br>
+            <small>Sex</small>
+            <input type="text" name=Sex>
+            <br>
+            <br>
+            <small>Ticket</small>
+            <input type="text" name=Ticket>
+            <br>
+            <br>
+            <small>Cabin</small>
+            <input type="text" name=Cabin>
+            <br>
+            <br> <small>Embarked</small>
+            <input type="text" name=Embarked>
+            <br>
+            <br>
+        </fieldset>
+    </form>
+
+    <div>
+        {%if result %}
+        <p>Passanger predict</p>
+        <p>{{result}}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
