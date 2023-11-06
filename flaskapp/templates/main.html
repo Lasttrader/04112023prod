@@ -49,15 +49,16 @@
             <input type="text" name=Embarked>
             <br>
             <br>
+            <button type="submit"> get predict</button>
         </fieldset>
-    </form>
 
-    <div>
-        {%if result %}
-        <p>Passanger predict</p>
-        <p>{{result}}</p>
-        {% endif %}
-    </div>
+        <div>
+            {%if result %}
+            <p>Passanger predict</p>
+            <p style="font-size: 60px">{{result}}</p>
+            {% endif %}
+        </div>
+    </form>
 </body>
 
 </html>

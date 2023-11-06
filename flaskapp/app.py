@@ -10,12 +10,12 @@ from flask import (Flask,
                    request)
 
 # load models
-sex_LE = pickle.load(open('../models/tech_models/Sex_LE.pkl', 'rb'))
-ticket_LE = pickle.load(open('../models/tech_models/Ticket_LE.pkl', 'rb'))
-cabin_LE = pickle.load(open('../models/tech_models/Cabin_LE.pkl', 'rb'))
-embarked_LE = pickle.load(open('../models/tech_models/Embarked_LE.pkl', 'rb'))
-num_scaler = pickle.load(open('../models/tech_models/num_scaler.pkl', 'rb'))
-kNN = pickle.load(open('../models/ml_models/kNN.pkl', 'rb'))
+sex_LE = pickle.load(open('models/tech_models/Sex_LE.pkl', 'rb'))
+ticket_LE = pickle.load(open('models/tech_models/Ticket_LE.pkl', 'rb'))
+cabin_LE = pickle.load(open('models/tech_models/Cabin_LE.pkl', 'rb'))
+embarked_LE = pickle.load(open('models/tech_models/Embarked_LE.pkl', 'rb'))
+num_scaler = pickle.load(open('models/tech_models/num_scaler.pkl', 'rb'))
+kNN = pickle.load(open('models/ml_models/kNN.pkl', 'rb'))
 print('models loaded success')
 
 # app
@@ -68,10 +68,28 @@ def main():
         # predict
         # X_scaled = [[ 0.82737724, -0.53037664,  0.43279337, -0.47367361, -0.50143844,  0.73769513,-1.44232155, -2.1037683,   0.58111394]]
         predict = kNN.predict(X_scaled)  # подаём уже отмасштабированные данные
-        # print(predict)
-        return render_template('main.html', result=predict)
+        print(predict)
+        if predict == 0:
+            prediction = 'not survived'
+        else:
+            prediction = 'survived'
+        return render_template('main.html', result=prediction)
 
 # API
+
+
+@app.route('/api/v1/add_message/', methods=['POST', 'GET'])
+def api_message():
+    x = request.json  # получаем json с другого сервиса
+    print(x['X_scaled'])
+    # подаём уже отмасштабированные данные
+    predict = kNN.predict([x['X_scaled']])
+    print(predict)
+    if predict == 0:
+        prediction = 'not survived'
+    else:
+        prediction = 'survived'
+    return jsonify(str(prediction))  # возвращаем прогноз
 
 
 if __name__ == '__main__':
