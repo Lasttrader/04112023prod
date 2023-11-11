@@ -1,0 +1,35 @@
+2023-11-11 10:09:34.583 notepad_ui_log.py[35] test -> Find Control Timeout(10s): {Name: '关闭', ControlType: ButtonControl}
+2023-11-11 11:02:55.334 ui_paint.py[22] <module> -> {ClassName: 'MSPaintApp', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.077s[11:02:55.257390 - 11:02:55.334389]
+2023-11-11 11:02:55.472 ui_paint.py[24] <module> -> {Name: 'Pencil', ControlType: ButtonControl} TraverseControls: 35, SearchTime: 0.130s[11:02:55.342391 - 11:02:55.472401]
+2023-11-11 11:03:07.401 ui_paint.py[29] <module> -> {Name: 'Shapes', ControlType: GroupControl} does not exist.
+2023-11-11 11:03:07.403 ui_paint.py[29] <module> -> {Name: 'Rectangle', ControlType: ListItemControl} does not exist.
+2023-11-11 11:03:07.404 ui_paint.py[29] <module> -> Find Control Timeout(10s): {Name: 'Rectangle', ControlType: ListItemControl}
+2023-11-11 11:03:11.567 ui_paint.py[22] <module> -> {ClassName: 'MSPaintApp', ControlType: WindowControl} TraverseControls: 6, SearchTime: 0.072s[11:03:11.495623 - 11:03:11.567622]
+2023-11-11 11:03:11.716 ui_paint.py[24] <module> -> {Name: 'Pencil', ControlType: ButtonControl} TraverseControls: 35, SearchTime: 0.138s[11:03:11.577624 - 11:03:11.716149]
+2023-11-11 11:03:23.690 ui_paint.py[29] <module> -> {Name: 'Shapes', ControlType: GroupControl} does not exist.
+2023-11-11 11:03:23.691 ui_paint.py[29] <module> -> {Name: 'Rectangle', ControlType: ListItemControl} does not exist.
+2023-11-11 11:03:23.693 ui_paint.py[29] <module> -> Find Control Timeout(10s): {Name: 'Rectangle', ControlType: ListItemControl}
+2023-11-11 11:05:52.173 ui_paint.py[22] <module> -> {ClassName: 'MSPaintApp', ControlType: WindowControl} TraverseControls: 9, SearchTime: 0.087s[11:05:52.087673 - 11:05:52.173723]
+2023-11-11 11:05:52.337 ui_paint.py[24] <module> -> {Name: 'Pencil', ControlType: ButtonControl} TraverseControls: 35, SearchTime: 0.154s[11:05:52.183726 - 11:05:52.337736]
+2023-11-11 11:05:54.467 ui_paint.py[29] <module> -> {Name: 'Shapes', ControlType: GroupControl} TraverseControls: 46, SearchTime: 0.387s[11:05:54.080190 - 11:05:54.467747]
+2023-11-11 11:05:54.549 ui_paint.py[29] <module> -> {Name: 'Rectangle', ControlType: ListItemControl} TraverseControls: 6, SearchTime: 0.076s[11:05:54.473753 - 11:05:54.549744]
+2023-11-11 11:05:55.786 ui_paint.py[32] <module> -> {Name: 'Using Rectangle tool on Canvas', ControlType: PaneControl} TraverseControls: 87, SearchTime: 0.425s[11:05:55.361411 - 11:05:55.786106]
+2023-11-11 11:22:56.135 ui_paint.py[22] <module> -> {ClassName: 'MSPaintApp', ControlType: WindowControl} TraverseControls: 5, SearchTime: 0.064s[11:22:56.070805 - 11:22:56.135122]
+2023-11-11 11:22:56.258 ui_paint.py[24] <module> -> {Name: 'Pencil', ControlType: ButtonControl} TraverseControls: 35, SearchTime: 0.116s[11:22:56.142806 - 11:22:56.258805]
+2023-11-11 11:22:58.187 ui_paint.py[29] <module> -> {Name: 'Shapes', ControlType: GroupControl} TraverseControls: 46, SearchTime: 0.299s[11:22:57.888911 - 11:22:58.187760]
+2023-11-11 11:22:58.226 ui_paint.py[29] <module> -> {Name: 'Rectangle', ControlType: ListItemControl} TraverseControls: 6, SearchTime: 0.036s[11:22:58.189761 - 11:22:58.226761]
+2023-11-11 11:22:59.354 ui_paint.py[32] <module> -> {Name: 'Using Rectangle tool on Canvas', ControlType: PaneControl} TraverseControls: 87, SearchTime: 0.324s[11:22:59.031059 - 11:22:59.354786]
+2023-11-11 11:23:00.135 ui_paint.py[36] <module> -> {ClassName: 'MSPaintApp', Name: 'Untitled - Paint', ControlType: WindowControl} TraverseControls: 3, SearchTime: 0.010s[11:23:00.125860 - 11:23:00.135817]
+2023-11-11 11:23:00.656 ui_paint.py[49] <module> -> {ClassName: 'UIRibbonCommandBarDock', Name: 'UIRibbonDockTop', AutomationId: '', ControlType: PaneControl} TraverseControls: 1, SearchTime: 0.005s[11:23:00.651712 - 11:23:00.656710]
+2023-11-11 11:23:00.660 ui_paint.py[49] <module> -> {ClassName: 'UIRibbonCommandBar', Name: 'Ribbon', AutomationId: '', ControlType: PaneControl} TraverseControls: 1, SearchTime: 0.002s[11:23:00.658710 - 11:23:00.660709]
+2023-11-11 11:23:00.665 ui_paint.py[49] <module> -> {ClassName: 'UIRibbonWorkPane', Name: 'Ribbon', AutomationId: '', ControlType: PaneControl} TraverseControls: 1, SearchTime: 0.002s[11:23:00.662710 - 11:23:00.665712]
+2023-11-11 11:23:00.669 ui_paint.py[49] <module> -> {ClassName: 'NUIPane', Name: '', AutomationId: '', ControlType: PaneControl} TraverseControls: 1, SearchTime: 0.002s[11:23:00.667711 - 11:23:00.669709]
+2023-11-11 11:23:00.675 ui_paint.py[49] <module> -> {ClassName: 'NetUIHWND', Name: 'Ribbon', AutomationId: '', ControlType: PaneControl} TraverseControls: 1, SearchTime: 0.004s[11:23:00.671711 - 11:23:00.675710]
+2023-11-11 11:23:00.729 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Lower Ribbon', AutomationId: '', ControlType: PaneControl} TraverseControls: 13, SearchTime: 0.051s[11:23:00.677711 - 11:23:00.729095]
+2023-11-11 11:23:00.740 ui_paint.py[49] <module> -> {ClassName: '', Name: '', AutomationId: '', ControlType: CustomControl} TraverseControls: 1, SearchTime: 0.008s[11:23:00.732066 - 11:23:00.740068]
+2023-11-11 11:23:00.748 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Home', AutomationId: '', ControlType: CustomControl} TraverseControls: 1, SearchTime: 0.003s[11:23:00.745608 - 11:23:00.748610]
+2023-11-11 11:23:00.865 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Shapes', AutomationId: '', ControlType: ToolBarControl} TraverseControls: 25, SearchTime: 0.114s[11:23:00.751613 - 11:23:00.865766]
+2023-11-11 11:23:00.872 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Shapes', AutomationId: '', ControlType: GroupControl} TraverseControls: 1, SearchTime: 0.003s[11:23:00.869160 - 11:23:00.872159]
+2023-11-11 11:23:00.877 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Shapes', AutomationId: '', ControlType: ListControl} TraverseControls: 1, SearchTime: 0.003s[11:23:00.874159 - 11:23:00.877159]
+2023-11-11 11:23:00.886 ui_paint.py[49] <module> -> {ClassName: '', Name: '', AutomationId: '', ControlType: CustomControl} TraverseControls: 1, SearchTime: 0.006s[11:23:00.879159 - 11:23:00.886164]
+2023-11-11 11:23:00.909 ui_paint.py[49] <module> -> {ClassName: '', Name: 'Rectangle', AutomationId: '', ControlType: ListItemControl} TraverseControls: 4, SearchTime: 0.021s[11:23:00.888164 - 11:23:00.909692]
