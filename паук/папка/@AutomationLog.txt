@@ -1,0 +1,2 @@
+2023-11-11 12:37:22.775 newSpider.py[377] fin -> 2023-11-11 11:14:46.698 newSpider.py[377] fin -> Find Control Timeout(10s): {ClassName: '#32770', Name: 'Выполнить', ControlType: WindowControl}
+2023-11-11 11:17:02.136 newSpider.py[229] clickFunction -> 
